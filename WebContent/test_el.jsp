@@ -6,12 +6,16 @@
     </head>
     <body>
     <p>
-        <!-- Initialisation d'un bean de type Coyote avec une action standard, pour l'exemple : -->
-        <jsp:useBean id="coyote" class="com.sdzee.beans.Coyote" />
-        <!-- Initialisation de sa propriété 'prénom' : -->
-        <jsp:setProperty name="coyote" property="prenom" value="Wile E."/>
-        <!-- Et affichage de sa valeur : -->
-        ${ coyote.prenom }
+        <% 
+        /* Création d'un tableau */
+        String[] animaux = {"chien", "chat", "souris", "cheval"};
+        request.setAttribute("animaux" , animaux);
+        %>
+        
+        <!-- Les trois syntaxes suivantes retournent le troisième élément du tableau  -->
+        ${ animaux[2] }<br />
+        ${ animaux['2'] }<br />
+        ${ animaux["2"] }<br />
     </p>
     </body>
 </html>
