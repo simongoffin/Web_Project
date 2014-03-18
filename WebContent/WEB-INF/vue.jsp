@@ -26,5 +26,16 @@
             }
             %>
         </p>
+        <p>
+            Récupération du jour du mois :
+            <%
+            Integer jourDuMois = (Integer) request.getAttribute( "jour" );
+            if ( jourDuMois % 2 == 0 ){
+                out.println("Jour pair : " + jourDuMois);
+            } else {
+                out.println("Jour impair : " + jourDuMois);
+            }
+            %>
+        </p>
     </body>
 </html>
