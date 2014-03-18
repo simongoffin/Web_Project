@@ -6,6 +6,7 @@
     </head>
     <body>
     <p>
+        <%@ page isELIgnored ="false" %>
         <% 
         /* Création d'une Map */
         java.util.Map<String,Integer> desserts = new java.util.HashMap<String, Integer>();
